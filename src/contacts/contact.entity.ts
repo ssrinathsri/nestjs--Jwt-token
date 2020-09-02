@@ -16,10 +16,10 @@ export class Contact {
 
   @Column()
   phone: string;
-  
+
   @Column()
   city: string;
 
   @Column()
-  country: string;  
+  country: string;
 }

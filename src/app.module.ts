@@ -6,14 +6,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [ContactsModule,       
-  TypeOrmModule.forRoot({
-    type: 'sqlite',
-    database: 'db',
-    entities: [__dirname + '/**/*.entity{.ts,.js}'],
-    synchronize: true,
- }), AuthModule,],
+  imports: [ContactsModule,
+    TypeOrmModule.forRoot({
+      type: 'sqlite',
+      database: 'db',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: true,
+    }), AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
